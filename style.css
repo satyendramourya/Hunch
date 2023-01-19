@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+.game-sec {
+  text-align: center;
+}
+h1 {
+  color: rgb(238, 25, 96);
+}
+
+.main-body {
+  max-width: 300px;
+  width: 100%;
+  display: grid;
+  margin: 10px auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.spin {
+  margin-top: -2px;
+  font-size: 40px;
+  animation: spiner 1.5s linear infinite;
+  display: inline-block;
+}
+@keyframes spiner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+
+.board {
+  height: 45px;
+  width: 45px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+.correct {
+  background-color: darkgreen;
+  color: white;
+}
+.wrong {
+  background-color: #888;
+}
+.close {
+  background-color: goldenrod;
+  color: white;
+}
+.invalid {
+  animation: flash 1s;
+}
+@keyframes flash {
+  5% {
+    border-color: crimson;
+  }
+  100% {
+    border-color: #ccc;
+  }
+}
